@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
+import Home from '@pages/Home'
 import './App.scss'
 
 const App = () => {
 
   return (
     <div className="App">
-      Hello, Pikachu!
-      {/* <Routes>
+      <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/pokedex' element={<Pokedex />} />
-      </Routes> */}
+          {/*<Route path='/pokedex' element={<Pokedex />} /> */}
+      </Routes>
     </div>
   )
 }
