@@ -1,0 +1,10 @@
+.pokedexHeader {
+  display: grid;
+  gap: 30px;
+  padding-top: 54px;
+
+  &__tools {
+    display: flex;
+    justify-content: space-between;
+  }
+}
