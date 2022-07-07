@@ -9,12 +9,13 @@
     padding-top: 28px;
     padding-right: 45px;
     align-items: flex-start;
+    
 
     background: linear-gradient(8.46deg, #46A487 -0.58%, #46D7AB 108.38%);
 
     &--red {background: linear-gradient(0deg, #F7786B, #F7786B),
         linear-gradient(10.25deg, #FC7F63 -12.11%, #FDCC6E 136.64%);
-        padding-right: 70px;
+       
         }
 
     &--blue {background: linear-gradient(0deg, #58ABF7, #58ABF7),
@@ -22,13 +23,16 @@
         } 
 
     &--yellow {background: #FFCE4B;
-        padding-right: 80px;
+        
     }    
 
     &--purple {background: #7C538C;
     }
 
     &--brown {background: #B1736C;
-        padding-left: 22px;
+       
     }
+
+
 }
+
