@@ -1,0 +1,35 @@
+{
+    "name": "PokeDex Database",
+    "homePageCards": [
+        {
+            "id": 1,
+            "title": "Pokedex",
+            "pokeball": ""
+        },
+        {
+            "id": 2,
+            "title": "Moves",
+            "backgroundStyle": "cardBackground--red"
+        },
+        {
+            "id": 3,
+            "title": "Abilities",
+            "backgroundStyle": "cardBackground--blue"
+        },
+        {
+            "id": 4,
+            "title": "Items",
+            "backgroundStyle": "cardBackground--yellow"
+        },
+        {
+            "id": 5,
+            "title": "Locations",
+            "backgroundStyle": "cardBackground--purple"
+        },
+        {
+            "id": 6,
+            "title": "Type Charts",
+            "backgroundStyle": "cardBackground--brown"
+        }
+    ]
+}
