@@ -1,0 +1,31 @@
+.cardBackground {
+    height: 75px;
+    width: 170px;
+    left: 28px;
+    top: 310px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 24px;
+    padding-right: 45px;
+    align-items: flex-start;
+
+    background: linear-gradient(8.46deg, #46A487 -0.58%, #46D7AB 108.38%);
+
+    &--red {background: linear-gradient(0deg, #F7786B, #F7786B),
+        linear-gradient(10.25deg, #FC7F63 -12.11%, #FDCC6E 136.64%);
+        }
+
+    &--blue {background: linear-gradient(0deg, #58ABF7, #58ABF7),
+        linear-gradient(7.97deg, #64A9FA -0.55%, #6DC1FD 107.61%);
+        } 
+
+    &--yellow {background: #FFCE4B;
+    }    
+
+    &--purple {background: #7C538C;
+    }
+
+    &--brown {background: #B1736C;
+    }
+}
