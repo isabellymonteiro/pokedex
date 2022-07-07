@@ -1,0 +1,77 @@
+{
+  "pokemonMockData": [
+    {
+      "id": 1,
+      "title": "Bulbasaur",
+      "image": "images/pokemonMockImages/bulbasaur.jpg",
+      "types": ["grass", "poison"]
+    },
+    {
+      "id": 2,
+      "title": "Ivysaur",
+      "image": "images/pokemonMockImages/ivysaur.jpg",
+      "types": ["grass", "poison"]
+    },
+    {
+      "id": 3,
+      "title": "Venusaur",
+      "image": "images/pokemonMockImages/venusaur.jpg",
+      "types": ["grass", "poison"]
+    },
+    {
+      "id": 4,
+      "title": "Charmander",
+      "image": "images/pokemonMockImages/charmander.jpg",
+      "types": ["fire"]
+    },
+    {
+      "id": 5,
+      "title": "Charmeleon",
+      "image": "images/pokemonMockImages/charmeleon.jpg",
+      "types": ["fire"]
+    },
+    {
+      "id": 6,
+      "title": "Charizard",
+      "image": "images/pokemonMockImages/charizard.jpg",
+      "types": ["fire", "flying"]
+    },
+    {
+      "id": 7,
+      "title": "Squirtle",
+      "image": "images/pokemonMockImages/squirtle.jpg",
+      "types": ["water"]
+    },
+    {
+      "id": 8,
+      "title": "Wartortle",
+      "image": "images/pokemonMockImages/wartortle.jpg",
+      "types": ["water"]
+    },
+    {
+      "id": 9,
+      "title": "Blastoise",
+      "image": "images/pokemonMockImages/blastoise.jpg",
+      "types": ["water"]
+    },
+    {
+      "id": 10,
+      "title": "Pikachu",
+      "image": "images/pokemonMockImages/pikachu.jpg",
+      "types": ["electric"]
+    },
+    {
+      "id": 11,
+      "title": "Bulbasaur",
+      "image": "images/pokemonMockImages/bulbasaur.jpg",
+      "types": ["grass", "poison"]
+    },
+    {
+      "id": 12,
+      "title": "Pikachu",
+      "image": "images/pokemonMockImages/pikachu.jpg",
+      "types": ["electric"]
+    } 
+  ]
+}
+
