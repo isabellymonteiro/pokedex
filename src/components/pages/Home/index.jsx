@@ -1,4 +1,4 @@
-import HomePageCards from '@molecules/HomePageCards'
+import HomePageCards from '@organisms/HomePageCards'
 import HomeHeader from '@organisms/HomeHeader'
 
 import './styles.scss'

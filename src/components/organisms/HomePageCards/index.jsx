@@ -1,6 +1,6 @@
 import React from "react";
 import homePageCardsData from '@staticData/homePageCardsData.json';
-import MainCard from "../MainCard";
+import MainCard from "@molecules/MainCard";
 
 import './style.scss';
 
