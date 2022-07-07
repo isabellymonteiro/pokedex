@@ -1,5 +1,5 @@
 import React from "react";
-import staticData from '@staticData.json';
+import homePageCardsData from '@staticData/homePageCardsData.json';
 import MainCard from "../MainCard";
 
 import './style.scss';
@@ -7,12 +7,11 @@ import './style.scss';
 const HomePageCards = () => {
     return (       
             <ul className="homePageCards">
-            {staticData.homePageCards.map((card) => {
+            {homePageCardsData.homePageCards.map((card) => {
                 return (
                 <MainCard key={card.id}
                 title={card.title}
                 backgroundStyle={card.backgroundStyle}
-                pokeball={card.pokeball}
                 />
                 )                
             })}

@@ -1,38 +1,75 @@
-.cardBackground {
-    height: 75px;
-    width: 170px;
-    left: 28px;
-    top: 310px;
+.mainCard {
+    display: flex;
+    height: 60px;
+    max-width: 170px;
     border-radius: 15px;
     color: #fff;
-    font-size: 12px;
-    padding-top: 28px;
-    padding-right: 45px;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
+    padding-left: 18px;
     
+    background: #46A487;
+    background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
+    background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"), linear-gradient(8.46deg, #46A487 -0.58%, #46D7AB 108.38%); /* W3C */
+ 
+    background-repeat: no-repeat;
+    background-position: left top, right;
 
-    background: linear-gradient(8.46deg, #46A487 -0.58%, #46D7AB 108.38%);
 
     &--red {background: linear-gradient(0deg, #F7786B, #F7786B),
         linear-gradient(10.25deg, #FC7F63 -12.11%, #FDCC6E 136.64%);
        
+        background: #F7786B;
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"), linear-gradient(0deg, #F7786B, #F7786B),
+        linear-gradient(10.25deg, #FC7F63 -12.11%, #FDCC6E 136.64%);
+
+        background-repeat: no-repeat;
+        background-position: left top, right;
+
         }
 
     &--blue {background: linear-gradient(0deg, #58ABF7, #58ABF7),
         linear-gradient(7.97deg, #64A9FA -0.55%, #6DC1FD 107.61%);
+
+        background: #64A9FA;
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"),
+        linear-gradient(0deg, #58ABF7, #58ABF7),
+        linear-gradient(7.97deg, #64A9FA -0.55%, #6DC1FD 107.61%);
+
+        background-repeat: no-repeat;
+        background-position: left top, right;
         } 
 
     &--yellow {background: #FFCE4B;
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
+       
+
+        background-repeat: no-repeat;
+        background-position: left top, right;
         
     }    
 
     &--purple {background: #7C538C;
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg");
+
+        background-repeat: no-repeat;
+        background-position: left top, right;
     }
 
     &--brown {background: #B1736C;
+        background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg");
+
+        background-repeat: no-repeat;
+        background-position: left top, right;
        
     }
 
+    &__title {
+        font-weight: 500;
+        font-size: 14px;
+    }
 
 }
 

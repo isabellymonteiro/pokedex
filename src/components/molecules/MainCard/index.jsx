@@ -1,10 +1,9 @@
 import './style.scss';
 
-const MainCard = ({title, backgroundStyle, pokeball}) => {
+const MainCard = ({title, backgroundStyle}) => {
     return (
-        <li className={`cardBackground cardBackground--${backgroundStyle}`}>
-            <h2>{title}</h2>
-            <img src={pokeball} className="cardBackground__pokeballImg"/>
+        <li className={`mainCard mainCard--${backgroundStyle}`}>
+            <h2 className='mainCard__title'>{title}</h2>
         </li>
     )
 }
