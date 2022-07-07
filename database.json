@@ -3,7 +3,8 @@
     "homePageCards": [
         {
             "id": 1,
-            "title": "Pokedex"
+            "title": "Pokedex",
+            "pokeball": ""
         },
         {
             "id": 2,

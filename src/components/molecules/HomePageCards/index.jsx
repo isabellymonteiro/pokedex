@@ -5,8 +5,7 @@ import MainCard from "../MainCard";
 import './style.scss';
 
 const HomePageCards = () => {
-    return (
-        <div>
+    return (       
             <ul className="homePageCards">
             {database.homePageCards.map((card) => {
                 return (
@@ -17,9 +16,7 @@ const HomePageCards = () => {
                 )                
             })}
             </ul>
-        </div>       
-        
-   
+
     )
     
     
