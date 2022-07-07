@@ -2,8 +2,8 @@ import './style.scss';
 
 const MainCard = ({title, backgroundStyle}) => {
     return (
-        <li className={`cardBackground ${backgroundStyle}`}>
-            <h2>{title}</h2>
+        <li className={`mainCard mainCard--${backgroundStyle}`}>
+            <h2 className='mainCard__title'>{title}</h2>
         </li>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import database from '../../../../database.json';
+import homePageCardsData from '@staticData/homePageCardsData.json';
 import MainCard from "../MainCard";
 
 import './style.scss';
@@ -7,7 +7,7 @@ import './style.scss';
 const HomePageCards = () => {
     return (       
             <ul className="homePageCards">
-            {database.homePageCards.map((card) => {
+            {homePageCardsData.homePageCards.map((card) => {
                 return (
                 <MainCard key={card.id}
                 title={card.title}
