@@ -1,15 +1,18 @@
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '@pages/Home'
+import Pokedex from '@pages/Pokedex'
 import './App.scss'
 
 const App = () => {
 
   return (
     <div className="App">
-      <Routes>
-          <Route path='/' element={<Home />} />
-          {/*<Route path='/pokedex' element={<Pokedex />} /> */}
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/pokedex' element={<Pokedex />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
