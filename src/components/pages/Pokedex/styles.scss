@@ -1,5 +1,11 @@
 .pokedexPage {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1280px;
+  background-image: url('images/ellipse.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  & > * {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1280px;
+  } 
 }

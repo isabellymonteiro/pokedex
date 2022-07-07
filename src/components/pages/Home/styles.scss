@@ -2,7 +2,6 @@
   background-image: url('images/ellipse.png');
   background-position: right top;
   background-repeat: no-repeat;
-  
 
   &__mainContent {
     margin: 0 auto;
@@ -11,18 +10,5 @@
     height: 70vh;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px; 
-  }
-
-  &__title {
-    font-size: var(--text-6xlarge);
-    font-weight: 800;
-    line-height: 42px;
-    text-align: left;
-    padding-top: 120px;
-    padding-bottom: 40px;
-
-    &Break {
-      display: block;
-    }
   }
 }

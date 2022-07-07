@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import ErrorMessage from '@molecules/ErrorMessage'
+import PokedexHeader from '@organisms/PokedexHeader'
 
 import './styles.scss'
 
@@ -23,10 +24,9 @@ const Pokedex = () => {
 
   return (
     <div className='pokedexPage'>
-      {fetchError ?
-        <ErrorMessage /> :
-        <p>Pokedex</p>
-      }
+      {fetchError ?  <ErrorMessage /> : (
+        <PokedexHeader />
+      )}
     </div>
   )
 }

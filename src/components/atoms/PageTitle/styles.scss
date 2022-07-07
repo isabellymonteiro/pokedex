@@ -1,0 +1,10 @@
+.pageTitle {
+    font-size: var(--text-6xlarge);
+    font-weight: 800;
+    line-height: 42px;
+    text-align: left;
+
+    &Break {
+      display: block;
+    }
+}
