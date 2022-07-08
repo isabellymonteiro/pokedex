@@ -5,15 +5,17 @@ import './styles.scss'
 const PokemonCard = ({ id, title, image, types }) => {
   
     return (
-      <li className='pokemonCard__container'>
-        <Link to={title.toLowerCase()} className='pokemonCard'>
-          <div className='pokemonCard__firstColumn'>
+      <li className={`pokemonCard pokemonCard--${types[0]}`}>
+        <Link to={title.toLowerCase()} className='pokemonCard__link'>
+          <div className='pokemonCard__column pokemonCard__column--1'>
             <h2 className='pokemonCard__title'>{title}</h2>
-            <span className='pokemonCard__type--one'>{types[0]}</span>
-            {types[1] && <span className='pokemonCard__type--two'>{types[1]}</span>}
+            <div className='pokemonCard__type'>
+              <span className='pokemonCard__type--1'>{types[0]}</span>
+              {types[1] && <span className='pokemonCard__type--2'>{types[1]}</span>}
+            </div>
           </div>
-          <div className='pokemonCard__secondColumn'>
-            <span className='pokemonCard__id'>{id}</span>
+          <div className='pokemonCard__column pokemonCard__column--2'>
+            <span className='pokemonCard__id'>#{id.toString().padStart(3, '0')}</span>
             <img className='pokemonCard__image' src={image} alt={`${title} picture`}></img>
           </div>
         </Link>

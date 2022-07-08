@@ -3,73 +3,73 @@
     {
       "id": 1,
       "title": "Bulbasaur",
-      "image": "images/pokemonMockImages/bulbasaur.jpg",
+      "image": "images/pokemonMockImages/bulbasaur.png",
       "types": ["grass", "poison"]
     },
     {
       "id": 2,
       "title": "Ivysaur",
-      "image": "images/pokemonMockImages/ivysaur.jpg",
+      "image": "images/pokemonMockImages/ivysaur.png",
       "types": ["grass", "poison"]
     },
     {
       "id": 3,
       "title": "Venusaur",
-      "image": "images/pokemonMockImages/venusaur.jpg",
+      "image": "images/pokemonMockImages/venusaur.png",
       "types": ["grass", "poison"]
     },
     {
       "id": 4,
       "title": "Charmander",
-      "image": "images/pokemonMockImages/charmander.jpg",
+      "image": "images/pokemonMockImages/charmander.png",
       "types": ["fire"]
     },
     {
       "id": 5,
       "title": "Charmeleon",
-      "image": "images/pokemonMockImages/charmeleon.jpg",
+      "image": "images/pokemonMockImages/charmeleon.png",
       "types": ["fire"]
     },
     {
       "id": 6,
       "title": "Charizard",
-      "image": "images/pokemonMockImages/charizard.jpg",
+      "image": "images/pokemonMockImages/charizard.png",
       "types": ["fire", "flying"]
     },
     {
       "id": 7,
       "title": "Squirtle",
-      "image": "images/pokemonMockImages/squirtle.jpg",
+      "image": "images/pokemonMockImages/squirtle.png",
       "types": ["water"]
     },
     {
       "id": 8,
       "title": "Wartortle",
-      "image": "images/pokemonMockImages/wartortle.jpg",
+      "image": "images/pokemonMockImages/wartortle.png",
       "types": ["water"]
     },
     {
       "id": 9,
       "title": "Blastoise",
-      "image": "images/pokemonMockImages/blastoise.jpg",
+      "image": "images/pokemonMockImages/blastoise.png",
       "types": ["water"]
     },
     {
       "id": 10,
       "title": "Pikachu",
-      "image": "images/pokemonMockImages/pikachu.jpg",
+      "image": "images/pokemonMockImages/pikachu.png",
       "types": ["electric"]
     },
     {
       "id": 11,
       "title": "Bulbasaur",
-      "image": "images/pokemonMockImages/bulbasaur.jpg",
+      "image": "images/pokemonMockImages/bulbasaur.png",
       "types": ["grass", "poison"]
     },
     {
       "id": 12,
       "title": "Pikachu",
-      "image": "images/pokemonMockImages/pikachu.jpg",
+      "image": "images/pokemonMockImages/pikachu.png",
       "types": ["electric"]
     } 
   ]

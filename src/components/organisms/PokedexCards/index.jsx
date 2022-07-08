@@ -16,9 +16,11 @@ const PokedexCards = ({ data }) => {
   })
 
   return (
-    <div className='pokedexCards'>
+  <div className='pokedexCards__container'>
+    <ul className='pokedexCards'>
       {PokemonCards}
-    </div>
+    </ul>
+  </div>
   )
 }
 
