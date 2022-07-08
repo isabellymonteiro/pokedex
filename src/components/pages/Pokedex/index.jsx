@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import ErrorMessage from '@molecules/ErrorMessage'
 import PokedexHeader from '@organisms/PokedexHeader'
+import PokedexCards from '@organisms/PokedexCards'
+
+// DELETAR DEPOIS
+import pokemonMockData from '@staticData/pokemonMockData.json'
 
 import './styles.scss'
 import { getTwelvePokemons } from '@services/api'
+
 
 const Pokedex = () => {
   const [fetchError, setFetchError] = useState(false)
@@ -36,12 +41,11 @@ const Pokedex = () => {
 
   return (
     <div className='pokedexPage'>
-      {fetchError ?  <ErrorMessage /> : (
+      {fetchError ? <ErrorMessage /> : (
         <>
           <PokedexHeader />
-          <button onClick={getTwelve}>Click Me!</button>
+          <PokedexCards data={pokemonMockData}/>
         </>
-        
       )}
     </div>
   )
