@@ -8,6 +8,7 @@ import PokedexCards from '@organisms/PokedexCards'
 import pokemonMockData from '@staticData/pokemonMockData.json'
 
 import './styles.scss'
+import { getTwelvePokemons } from '@services/api'
 
 
 const Pokedex = () => {
@@ -24,6 +25,17 @@ const Pokedex = () => {
       }
     }
   }, [])
+
+  const getTwelve = async() => {
+      const twelvePokemonsData = await getTwelvePokemons();
+
+      if (twelvePokemonsData){
+        console.log(twelvePokemonsData)
+      } else {
+        setFetchError(true)
+      }
+
+  }
   
   // sem o state acima, performar fetch de pouco a pouco para buscar todos (com infinite scroll)
 
@@ -37,6 +49,8 @@ const Pokedex = () => {
       )}
     </div>
   )
+
 }
+
 
 export default Pokedex
