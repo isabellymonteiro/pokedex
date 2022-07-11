@@ -3,10 +3,7 @@
   grid-template-columns: 1fr;
   gap: 10px;
   justify-items: center;
-
-  &__container {
-    padding-top: 36px;
-  }
+  padding-top: 36px;
 }
 
 @media (min-width: 400px) {

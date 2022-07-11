@@ -2,17 +2,30 @@ import PokemonCard from '@molecules/PokemonCard'
 
 import './styles.scss'
 
-const PokedexCards = ({ data }) => {
-  const PokemonCards = data.pokemonMockData.map((pokemonData) => {
-    return (
-      <PokemonCard
-        key={pokemonData.id}
-        id={pokemonData.id}
-        title={pokemonData.title}
-        image={pokemonData.image}
-        types={pokemonData.types}
-      />
-    )
+const PokedexCards = ({ data, lastCardRef }) => {
+  const PokemonCards = data.map((pokemon, index) => {
+    if (data.length === index + 1) {
+      return (
+        <PokemonCard
+          ref={lastCardRef}
+          key={pokemon.id}
+          id={pokemon.id}
+          name={pokemon.name}
+          image={pokemon.sprites.front_default}
+          types={pokemon.types}
+        />
+      )
+    } else {
+      return (
+        <PokemonCard
+          key={pokemon.id}
+          id={pokemon.id}
+          name={pokemon.name}
+          image={pokemon.sprites.front_default}
+          types={pokemon.types}
+        />
+      )
+    }
   })
 
   return (

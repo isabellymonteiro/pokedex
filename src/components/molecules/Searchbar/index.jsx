@@ -22,7 +22,10 @@ const Searchbar = () => {
       if (allPokemonBasicData) {
         const searchTerm = searchbarInputRef.current.value.trim()
         const filteredPokemonBasicData = filterPokemons(allPokemonBasicData, searchTerm)
-        navigate('/pokedex', { state: { filteredPokemonBasicData } })
+        const filteredPokemonUrls = filteredPokemonBasicData.map((pokemonData) => {
+          return pokemonData.url
+        })
+        navigate('/pokedex', { state: { filteredPokemonUrls } })
       } else {
         navigate('/pokedex', { state: { error: true } })
       }

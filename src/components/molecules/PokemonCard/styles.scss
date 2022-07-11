@@ -96,12 +96,13 @@
       &--2 {
         justify-content: space-between;
         align-items: end;
-        padding: 10px 10px 5px 0;
+        padding-top: 10px;
       }
   }
 
-  &__title {
+  &__name {
     font-size: var(--text-base);
+    text-transform: capitalize;
     line-height: 14px;
     margin-bottom: 10px;
   }
@@ -130,12 +131,11 @@
     font-size: var(--text-base);
     font-weight: 600;
     color: rgba(0, 0, 0, .08);
-    padding-right: 5px;
+    padding-right: 15px;
   }
   
   &__image {
     width: 100%;
-    max-width: 76px; // fixada só para teste com mock data
-    height: 70px; // fixada só para teste com mock data
+    max-width: 70px;
   }
 }
