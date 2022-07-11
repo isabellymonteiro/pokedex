@@ -22,6 +22,45 @@
     background: #FFCE4B;
   }
 
+  &--poison {
+    background: #884EA0
+  }
+
+  &--flying {
+    background: #D7BDE2;
+  }
+
+  &--bug {
+    background: #acb83f;
+  }
+
+  &--normal {
+    background: #b4b48c;
+  }
+
+  &--ground {
+    background: #d8bd72;
+  }
+
+  &--fairy {
+    background: #EE99AC;
+  }
+
+  &--fighting {
+    background: #99413a;
+  }
+
+  &--psychic {
+    background: #ff7ba3;
+  }
+
+  &--steel {
+    background: #B8B8D0;
+  }
+
+  &--ice {
+    background: #98D8D8;
+  }
   // acrescentar outros types de pokemon 
 
   &__link {
