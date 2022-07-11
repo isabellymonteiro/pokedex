@@ -4,32 +4,38 @@
         {
             "id": 1,
             "title": "Pokedex",
-            "backgroundStyle": "green"
+            "backgroundStyle": "green",
+            "linkTo": "/pokedex"
         },
         {
             "id": 2,
             "title": "Moves",
-            "backgroundStyle": "red"
+            "backgroundStyle": "red",
+            "linkTo": "#"
         },
         {
             "id": 3,
             "title": "Abilities",
-            "backgroundStyle": "blue"
+            "backgroundStyle": "blue",
+            "linkTo": "#"
         },
         {
             "id": 4,
             "title": "Items",
-            "backgroundStyle": "yellow"
+            "backgroundStyle": "yellow",
+            "linkTo": "#"
         },
         {
             "id": 5,
             "title": "Locations",
-            "backgroundStyle": "purple"
+            "backgroundStyle": "purple",
+            "linkTo": "#"
         },
         {
             "id": 6,
             "title": "Type Charts",
-            "backgroundStyle": "brown"
+            "backgroundStyle": "brown",
+            "linkTo": "#"
         } 
     ]
 }

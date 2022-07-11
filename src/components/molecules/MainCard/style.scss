@@ -8,7 +8,7 @@
     align-items: center;
     padding-left: 18px;
     
-    box-shadow: 0 9px 5px -5px #2CDAB1;
+    box-shadow: 0 20px 15px -15px #2CDAB1;
 
     background: #46A487;
     background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
@@ -21,7 +21,7 @@
     &--red {background: linear-gradient(0deg, #F7786B, #F7786B),
         linear-gradient(10.25deg, #FC7F63 -12.11%, #FDCC6E 136.64%);
        
-        box-shadow: 0 9px 5px -5px  #FA6555;
+        box-shadow: 0 20px 15px -15px  #FA6555;
 
         background: #F7786B;
         background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
@@ -36,7 +36,7 @@
     &--blue {background: linear-gradient(0deg, #58ABF7, #58ABF7),
         linear-gradient(7.97deg, #64A9FA -0.55%, #6DC1FD 107.61%);
 
-        box-shadow: 0 9px 5px -5px  #429BED;
+        box-shadow: 0 20px 15px -15px  #429BED;
 
         background: #64A9FA;
         background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
@@ -51,7 +51,7 @@
     &--yellow {background: #FFCE4B;
         background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg"); /* fallback */
        
-        box-shadow: 0 9px 5px -5px  #F6C747;
+        box-shadow: 0 20px 15px -15px #F6C747;
 
         background-repeat: no-repeat;
         background-position: left top, right;
@@ -61,7 +61,7 @@
     &--purple {background: #7C538C;
         background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg");
 
-        box-shadow: 0 9px 5px -5px #9F5BBA;
+        box-shadow: 0 20px 15px -15px #9F5BBA;
 
         background-repeat: no-repeat;
         background-position: left top, right;
@@ -70,7 +70,7 @@
     &--brown {background: #B1736C;
         background-image:url("icons/Ellipse.svg"), url("icons/Subtract.svg");
 
-        box-shadow: 0 9px 5px -5px  #CA8179;
+        box-shadow: 0 20px 15px -15px #CA8179;
 
         background-repeat: no-repeat;
         background-position: left top, right;
@@ -82,5 +82,9 @@
         font-size: 14px;
     }
 
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
