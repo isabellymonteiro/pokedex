@@ -1,26 +1,26 @@
+import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
-const PokemonCard = ({ id, title, image, types }) => {
-  
+const PokemonCard = ({ id, name, image, types }, ref) => {
     return (
-      <li className={`pokemonCard pokemonCard--${types[0]}`}>
-        <Link to={title.toLowerCase()} className='pokemonCard__link'>
+      <li ref={ref} className={`pokemonCard pokemonCard--${types[0].type.name}`}>
+        <Link to={name.toLowerCase()} className='pokemonCard__link'>
           <div className='pokemonCard__column pokemonCard__column--1'>
-            <h2 className='pokemonCard__title'>{title}</h2>
+            <h2 className='pokemonCard__name'>{name}</h2>
             <div className='pokemonCard__type'>
-              <span className='pokemonCard__type--1'>{types[0]}</span>
-              {types[1] && <span className='pokemonCard__type--2'>{types[1]}</span>}
+              <span className='pokemonCard__type--1'>{types[0].type.name}</span>
+              {types[1] && <span className='pokemonCard__type--2'>{types[1].type.name}</span>}
             </div>
           </div>
           <div className='pokemonCard__column pokemonCard__column--2'>
             <span className='pokemonCard__id'>#{id.toString().padStart(3, '0')}</span>
-            <img className='pokemonCard__image' src={image} alt={`${title} picture`}></img>
+            <img className='pokemonCard__image' src={image} alt={`${name} picture`}></img>
           </div>
         </Link>
       </li>
     )
 }
 
-export default PokemonCard
+export default forwardRef(PokemonCard)

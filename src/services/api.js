@@ -1,3 +1,5 @@
+import { MAX_POKEMONS } from '@pages/Pokedex'
+
 export const getAllPokemonBasicData = async (limit) => {
   try {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
@@ -14,18 +16,19 @@ export const getAllPokemonBasicData = async (limit) => {
   }
 }
 
-export const getTwelvePokemons = async () => {
+export const getTwentyPokemons = async (initialId) => {
   
   const pokemons = []
 
-    for (var pokemonId = 1; pokemonId <= 12; pokemonId++){
-      try {
+  for (let pokemonId = initialId; pokemonId <= (initialId + 19); pokemonId++){
+    try {
+      if (pokemonId > MAX_POKEMONS) break
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-        
+      
     if (!response.ok) {
       throw new Error('Request failed!')
     }
-    
+  
     const data = await response.json()
 
     pokemons.push(data)
@@ -33,9 +36,29 @@ export const getTwelvePokemons = async () => {
     } catch(e) {
       return null
     }
+  }
+  return pokemons
+}
 
+export const getFilteredPokemons = async (pokemonUrls) => {
+  
+  const filteredPokemons = []
+
+  for (let pokemonUrl = 0; pokemonUrl < pokemonUrls.length; pokemonUrl++){
+    try {
+      const response = await fetch(`${pokemonUrls[pokemonUrl]}`)
+      
+    if (!response.ok) {
+      throw new Error('Request failed!')
     }
- 
-    return pokemons;
+  
+    const data = await response.json()
 
+    filteredPokemons.push(data)
+
+    } catch(e) {
+      return null
+    }
+  }
+  return filteredPokemons
 }
