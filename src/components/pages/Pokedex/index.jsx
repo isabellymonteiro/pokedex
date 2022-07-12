@@ -32,7 +32,6 @@ const Pokedex = () => {
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && pokemons.length < MAX_POKEMONS) {
         setPageNumber(prevPageNumber => prevPageNumber + 1)
-        console.log('Visible')
       }
     }, options)
 
@@ -46,6 +45,7 @@ const Pokedex = () => {
     if (twelvePokemonsData) {
       if (pokemons.length === 0) {
         setPokemons(twelvePokemonsData)
+        
       } else {
         setPokemons(prevPokemons => {
           return [...prevPokemons, ...twelvePokemonsData]

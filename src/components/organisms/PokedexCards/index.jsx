@@ -9,20 +9,14 @@ const PokedexCards = ({ data, lastCardRef }) => {
         <PokemonCard
           ref={lastCardRef}
           key={pokemon.id}
-          id={pokemon.id}
-          name={pokemon.name}
-          image={pokemon.sprites.front_default}
-          types={pokemon.types}
+          pokemonData={pokemon}
         />
       )
     } else {
       return (
         <PokemonCard
           key={pokemon.id}
-          id={pokemon.id}
-          name={pokemon.name}
-          image={pokemon.sprites.front_default}
-          types={pokemon.types}
+          pokemonData={pokemon}
         />
       )
     }
