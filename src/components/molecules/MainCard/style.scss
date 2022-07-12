@@ -3,10 +3,8 @@
     height: 60px;
     max-width: 170px;
     border-radius: 15px;
-    color: #fff;
     justify-content: start;
     align-items: center;
-    padding-left: 18px;
     
     box-shadow: 0 20px 15px -15px #2CDAB1;
 
@@ -80,11 +78,12 @@
     &__title {
         font-weight: 500;
         font-size: 14px;
+        color: #fff;
+        padding-left: 18px;
     }
 
     &__link {
-        text-decoration: none;
-        color: #fff;
+        text-decoration: none;       
     }
 }
 
