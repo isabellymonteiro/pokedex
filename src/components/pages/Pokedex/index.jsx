@@ -90,11 +90,7 @@ const Pokedex = () => {
           {!!pokemons.length && (
             <PokedexCards data={pokemons} lastCardRef={lastPokemonRef} />
           )}
-          {loading && 
-            <div className='pokedexPage__loading'>
-              <LoadingSpinner />
-            </div>
-          }
+          {loading && <LoadingSpinner />}
         </>
       }
     </div>

@@ -6,8 +6,6 @@ import { getAllPokemonBasicData } from '@services/api'
 
 import './styles.scss'
 
-const POKEMONS_LIMIT = 151
-
 const Searchbar = () => {
   const navigate = useNavigate()
   const searchbarInputRef = useRef()
@@ -18,7 +16,7 @@ const Searchbar = () => {
 
   const getPokemons = async () => {
     if (searchbarInputRef.current.value.trim() !== '') {
-      const allPokemonBasicData = await getAllPokemonBasicData(POKEMONS_LIMIT)
+      const allPokemonBasicData = await getAllPokemonBasicData()
       if (allPokemonBasicData) {
         const searchTerm = searchbarInputRef.current.value.trim()
         const filteredPokemonBasicData = filterPokemons(allPokemonBasicData, searchTerm)
