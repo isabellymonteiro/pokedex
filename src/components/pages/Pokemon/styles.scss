@@ -1,0 +1,8 @@
+.pokemonPage {
+  display: grid;
+  justify-items: center;
+  
+  &__subpages{
+    width: 90%;
+  }
+}

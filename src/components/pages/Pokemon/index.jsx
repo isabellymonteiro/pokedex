@@ -1,7 +1,8 @@
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom'
+import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { useCallback, useEffect, useState } from 'react'
 import ErrorMessage from '@molecules/ErrorMessage'
 import LoadingSpinner from '@atoms/Icons/LoadingSpinner'
+import SubpagesNav from '@organisms/SubpagesNav'
 import { getPokemon } from '@services/api'
 
 import './styles.scss'
@@ -34,20 +35,21 @@ const Pokemon = () => {
     }
   }, [fetchPokemon])
 
+  const subpages = [
+    { subpageName: 'about', linkTo: 'about' },
+    { subpageName: 'base stats', linkTo: 'base-stats' },
+    { subpageName: 'evolution', linkTo: 'evolution' },
+    { subpageName: 'moves', linkTo: 'moves' }
+  ]
+
   return (
     <div className='pokemonPage'>
       {error && <ErrorMessage />}
       {loading && <LoadingSpinner />}
       {pokemon && !loading &&
         <>
-          hi pokemon {pokemonName}!
           <div className='pokemonPage__subpages'>
-            <ul>
-              <li><Link to='about'>About</Link></li>
-              <li><Link to='base-stats'>Base Stats</Link></li>
-              <li><Link to='evolution'>Evolution</Link></li>
-              <li><Link to='moves'>Moves</Link></li>
-            </ul>
+            <SubpagesNav subpages={subpages} />
             <Outlet />
           </div>
         </>
