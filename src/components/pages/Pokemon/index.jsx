@@ -1,26 +1,27 @@
 import { Outlet, useLocation, useParams } from 'react-router-dom'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import ErrorMessage from '@molecules/ErrorMessage'
 import LoadingSpinner from '@atoms/Icons/LoadingSpinner'
 import SubpagesNav from '@organisms/SubpagesNav'
+import { PokemonContext } from '@contexts/PokemonContext'
 import { getPokemon } from '@services/api'
 
 import './styles.scss'
 
 const Pokemon = () => {
-  const [pokemon, setPokemon] = useState()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
+  const { pokemonData, setPokemonData } = useContext(PokemonContext)
   const { pokemonName } = useParams()
   const { state } = useLocation()
  
   const fetchPokemon = useCallback(async () => {
     setLoading(true)
-    const pokemonData = await getPokemon(pokemonName.toLowerCase())
+    const pokemon = await getPokemon(pokemonName.toLowerCase())
     
-    if (pokemonData) {
-      setPokemon(pokemonData)
+    if (pokemon) {
+      setPokemonData(pokemon)
     } else {
       setError(true)
     }
@@ -29,7 +30,7 @@ const Pokemon = () => {
 
   useEffect(() => {
     if (state) {
-      setPokemon(state)
+      setPokemonData(state)
     } else {
       fetchPokemon()
     }
@@ -46,7 +47,7 @@ const Pokemon = () => {
     <div className='pokemonPage'>
       {error && <ErrorMessage />}
       {loading && <LoadingSpinner />}
-      {pokemon && !loading &&
+      {pokemonData && !loading &&
         <>
           <div className='pokemonPage__subpages'>
             <SubpagesNav subpages={subpages} />
