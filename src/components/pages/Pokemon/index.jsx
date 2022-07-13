@@ -11,7 +11,7 @@ const Pokemon = () => {
   const { state } = useLocation()
  
   const { loading, error, pokemonData } = useFetchPokemon(pokemonName, state)
-
+console.log(pokemonData)
   const subpages = [
     { subpageName: 'about', linkTo: 'about' },
     { subpageName: 'base stats', linkTo: 'base-stats' },
