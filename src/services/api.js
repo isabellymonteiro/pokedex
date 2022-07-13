@@ -69,7 +69,7 @@ export const getPokemon = async (pokemonName) => {
 
 export const getPokemonAbout = async (pokemonName) => {
   try {
-    const response = await fetch (`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`)
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`)
     if (!response.ok) {
       throw new Error('Request failed!')
     }

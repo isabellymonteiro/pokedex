@@ -1,35 +1,46 @@
-import { useEffect } from 'react'
-import { useCallback } from 'react'
+import { useEffect, useCallback, useContext, useState } from 'react'
 import { getPokemonAbout } from '../../../services/api'
+import ErrorMessage from '@molecules/ErrorMessage'
+import LoadingSpinner from '@atoms/Icons/LoadingSpinner'
+
+
+
 import './styles.scss'
+
 
 const PokemonAbout = () => {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [pokemons, setPokemons] = useState([])
-
+  const [pokemon, setPokemon] = useState([])
+  const {pokemonData} = useContext(PokemonContext)
   
   const fetchPokemon = useCallback(async () => {
     setLoading(true)
-    const pokemonData = await getPokemonAbout(bulbasaur)
+    const additionalPokemonData = await getPokemonAbout(pokemonData.name)
 
-    if (pokemonData) {
-      setPokemons(pokemonData)
+    if (additionalPokemonData) {
+      setPokemon(additionalPokemonData)
     } else {
       setError(true)
     }
+    console.log(additionalPokemonData);
     setLoading(false)
   }, [])
 
   useEffect(() => {
-    if (state) {
-      setPokemons(state)
-    } else {
-      fetchPokemon()
-    }
+    fetchPokemon()
   }, [fetchPokemon])
   return (
-    <h2>Pokemon About</h2>
+    <div>
+        {error && <ErrorMessage />}
+        {loading && <LoadingSpinner />}
+        {!!pokemon.length && pokemonData && !loading &&
+        <>
+          
+        </>
+      }
+    </div>
+    
   )
 }
 
