@@ -66,6 +66,7 @@ export const getPokemon = async (pokemonName) => {
   }
 }
 
+
 export const getPokemonAbout = async (pokemonName) => {
   try {
     const response = await fetch (`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`)
