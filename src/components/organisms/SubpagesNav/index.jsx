@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 import './styles.scss'
 
-const SubpagesNav = ({ subpages }) => {
+const SubpagesNav = ({ subpages, dataToPass }) => {
   const subpagesItems = subpages.map((item) => {
     return (
       <li key={item.linkTo} className='subpagesNav__item'>
@@ -10,7 +10,8 @@ const SubpagesNav = ({ subpages }) => {
           to={item.linkTo} 
           className={({ isActive }) =>
             (isActive ? 'subpagesNav__link subpagesNav__link--active' : 'subpagesNav__link')
-          }>
+          }
+          state={dataToPass}>
           {item.subpageName}
         </NavLink>
       </li>
