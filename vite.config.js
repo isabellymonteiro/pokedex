@@ -19,7 +19,7 @@ export default defineConfig({
       '@staticData': path.resolve(__dirname, 'src', 'staticData'),
       '@hooks': path.resolve(__dirname, 'src', 'hooks'),
       '@services': path.resolve(__dirname, 'src', 'services'),
-      // '@img': path.resolve(__dirname, 'public/images')
+      '@contexts': path.resolve(__dirname, 'src', 'contexts')
     }
   }
 })
