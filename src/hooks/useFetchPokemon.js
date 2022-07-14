@@ -4,7 +4,7 @@ import { getPokemon } from '@services/api'
 const useFetchPokemon = (pokemonName, state) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  const [pokemonData, setPokemonData] = useState([])
+  const [pokemonData, setPokemonData] = useState({})
   
   const fetchPokemon = useCallback(async () => {
     setLoading(true)

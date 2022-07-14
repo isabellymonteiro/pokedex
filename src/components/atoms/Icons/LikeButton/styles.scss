@@ -1,0 +1,16 @@
+.likeButton {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+@media (hover: hover) {
+  .likeButton {
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,8 +1,88 @@
 .pokemonPage {
   display: grid;
   justify-items: center;
+
+  background-image: url('/icons/ornament.svg'), url('/icons/pokemonDots.svg'), url('/icons/pokemonPageEllipse.svg');
+  background-position: left top, 80% 0%, center 240px;
+  background-repeat: no-repeat;
+
+  &--grass {
+    background-color: #46D7AB;
+  }
+
+  &--fire {
+    background-color: #FB6C6C;
+  }
+
+  &--water {
+    background-color: #77BDFE;
+  }
+
+  &--electric {
+    background-color: #FFCE4B;
+  }
+
+  &--poison {
+    background-color: #884EA0
+  }
+
+  &--flying {
+    background-color: #D7BDE2;
+  }
+
+  &--bug {
+    background-color: #acb83f;
+  }
+
+  &--normal {
+    background-color: #b4b48c;
+  }
+
+  &--ground {
+    background-color: #d8bd72;
+  }
+
+  &--fairy {
+    background-color: #EE99AC;
+  }
+
+  &--fighting {
+    background-color: #99413a;
+  }
+
+  &--psychic {
+    background-color: #ff7ba3;
+  }
+
+  &--steel {
+    background-color: #B8B8D0;
+  }
+
+  &--ice {
+    background-color: #98D8D8;
+  }
+
+  &--ghost {
+    background-color: #614C83;
+  }
+
+  &--dragon {
+    background-color: #771de5;
+  }
   
-  &__subpages{
+  &__mainContent {
     width: 90%;
+  }
+  &__subpages{
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: var(--white);
+    padding: 30px 0;
+
+    &Content {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }

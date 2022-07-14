@@ -7,7 +7,7 @@ import PokemonBaseStats from '@pages/PokemonBaseStats'
 import PokemonEvolution from '@pages/PokemonEvolution'
 import PokemonMoves from '@pages/PokemonMoves'
 
-import { PokemonProvider } from '@contexts/PokemonContext'
+//import { PokemonProvider } from '@contexts/PokemonContext'
 
 import './App.scss'
 
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <PokemonProvider>
+      {/* <PokemonProvider> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/pokedex' element={<Pokedex />} />
@@ -26,7 +26,7 @@ const App = () => {
             <Route path='moves' element={<PokemonMoves />} />
           </Route>
         </Routes>
-      </PokemonProvider>
+      {/* </PokemonProvider> */}
     </div>
   )
 }

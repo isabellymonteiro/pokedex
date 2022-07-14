@@ -1,0 +1,50 @@
+.pokemonHeader {
+
+  &__tools, &__title, &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tools {
+    padding-top: 50px;
+  }
+
+  &__title {
+    color: var(--white);
+    padding-top: 30px;
+  }
+
+  &__name {
+    font-size: var(--text-9xlarge);
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__id {
+    font-size: var(--text-large);
+    font-weight: 700;
+  }
+
+  &__info {
+    color: var(--white);
+    padding-top: 10px;
+  }
+
+  &__type {
+  
+    &--1, &--2 {
+      display: inline-block;
+      font-size: var(--text-xsmall);
+      text-transform: capitalize;
+      min-height: 25px;
+      padding: 8px 20px;
+      border-radius: 38px;
+      background: rgba(255, 255, 255, .28);
+    }
+
+    &--1 {
+      margin-right: 7px;
+    }
+  }
+}
