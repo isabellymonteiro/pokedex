@@ -65,3 +65,22 @@ export const getPokemon = async (pokemonName) => {
     return null
   }
 }
+
+
+export const getPokemonTypes = async (types) => {
+  const typeDefensesData = []
+
+  for (let type = 0; type < types.length; type++) {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/type/${types[type]}`)
+      if (!response.ok) {
+        throw new Error('Request failed!')
+      }
+      const data = await response.json()
+      typeDefensesData.push(data)
+    } catch (e) {
+      return null
+    }
+  }
+  return typeDefensesData
+}

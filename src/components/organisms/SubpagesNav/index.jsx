@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 import './styles.scss'
 
-const SubpagesNav = ({ subpages, dataToPass }) => {
+const SubpagesNav = ({ subpages, dataToPass = false }) => {
   const subpagesItems = subpages.map((item) => {
     return (
       <li key={item.linkTo} className='subpagesNav__item'>

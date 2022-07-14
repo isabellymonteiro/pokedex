@@ -1,4 +1,3 @@
-//not being used
 import { useState, useCallback, useEffect } from 'react'
 import { getPokemon } from '@services/api'
 
@@ -17,17 +16,16 @@ const useFetchPokemon = (pokemonName, state) => {
       setError(true)
     }
     setLoading(false)
-    
   }, [])
 
   useEffect(() => {
     if (state) {
-    setPokemonData(state)
-  } else {
-    fetchPokemon()
+      setPokemonData(state)
+    } else {
+      fetchPokemon()
     }
-  }, [])
-
+  }, [fetchPokemon])
+  
   return {
     loading,
     error,
