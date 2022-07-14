@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Home from '@pages/Home'
 import Pokedex from '@pages/Pokedex'
 import Pokemon from '@pages/Pokemon'
@@ -12,11 +12,12 @@ import PokemonMoves from '@pages/PokemonMoves'
 import './App.scss'
 
 const App = () => {
-
+  
   return (
     <div className="App">
       {/* <PokemonProvider> */}
         <Routes>
+          <Route path='*' element={<Navigate to='/' />} />
           <Route path='/' element={<Home />} />
           <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:pokemonName/*' element={<Pokemon />}>
