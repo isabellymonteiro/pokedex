@@ -24,7 +24,7 @@ const Pokemon = () => {
     <>
       {error && <ErrorMessage />}
       {loading && <LoadingSpinner />}
-      {Object.keys(pokemonData).length > 0 && !loading &&
+      {Object.keys(pokemonData).length > 0 && !error && !loading &&
         <div className={`pokemonPage pokemonPage--${pokemonData.types[0].type.name}`}>
           <div className='pokemonPage__mainContent'>
             <PokemonPageMain data={pokemonData} />

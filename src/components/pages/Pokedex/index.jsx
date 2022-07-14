@@ -82,18 +82,18 @@ const Pokedex = () => {
   }, [fetchTwentyPokemons, fetchFilteredPokemons, pageNumber])
 
   return (
-    <div className='pokedexPage'>
+    <>
       {error && <ErrorMessage />}
       {!error &&
-        <>
+        <div className='pokedexPage'>
           <PokedexHeader />
           {!!pokemons.length && (
             <PokedexCards data={pokemons} lastCardRef={lastPokemonRef} />
           )}
           {loading && <LoadingSpinner />}
-        </>
+        </div>
       }
-    </div>
+    </>
   )
 }
 

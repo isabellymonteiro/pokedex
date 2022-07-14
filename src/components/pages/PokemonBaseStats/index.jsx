@@ -12,14 +12,16 @@ const PokemonBaseStats = () => {
   const { loading, error, pokemonData } = useFetchPokemon(pokemonName, state)
   
   return (
-    <div className='pokemonBaseStats'>
-      {Object.keys(pokemonData).length > 0 &&
-        <>
-          <PokemonStats stats={pokemonData.stats} />
-          <PokemonTypeDefenses types={pokemonData.types} />
-        </>
-      } 
-    </div>
+  <>
+    {error && <ErrorMessage />}
+    {loading && <LoadingSpinner />}
+    {Object.keys(pokemonData).length > 0 && !error && !loading &&
+      <div className='pokemonBaseStats'>
+        <PokemonStats stats={pokemonData.stats} />
+        <PokemonTypeDefenses types={pokemonData.types} />
+      </div>
+    }
+  </>
   )
 }
 
