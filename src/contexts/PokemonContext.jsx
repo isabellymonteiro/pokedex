@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+/* import React, { createContext, useState } from 'react'
 
 export const PokemonContext = createContext()
 
@@ -15,4 +15,4 @@ export const PokemonProvider = ({ children }) => {
       {children}
     </PokemonContext.Provider>
   )
-}
+} */
