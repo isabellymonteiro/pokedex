@@ -1,0 +1,24 @@
+.pokemonStats {
+  display: grid;
+  gap: 14px;
+  list-style-type: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-small);
+  
+    &Name {
+      color: var(--black-1);
+      min-width: 70px;
+      text-align: left;
+    }
+
+    &BaseStat {
+      color: var(--black);
+      text-align: right;
+      padding-right: 15px;
+      min-width: 44px;
+    }
+  }
+}

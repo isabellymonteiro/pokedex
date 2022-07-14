@@ -1,13 +1,22 @@
-import { useContext } from 'react'
-import { PokemonContext } from '@contexts/PokemonContext'
+import PokemonStats from '@organisms/PokemonStats'
+import PokemonTypeDefenses from '@organisms/PokemonTypeDefenses'
+import { useLocation, useParams } from 'react-router-dom'
 
 import './styles.scss'
 
 const PokemonBaseStats = () => {
-  const { pokemonData } = useContext(PokemonContext)
-  //console.log(pokemonData)
+  const { state } = useLocation()
+  const { pokemonName } = useParams()
+  
   return (
-    <h2>Pokemon Base Stats</h2>
+    <div className='pokemonBaseStats'>
+      {state &&
+        <>
+          <PokemonStats stats={state.stats} />
+          <PokemonTypeDefenses types={state.types} />
+        </>
+      } 
+    </div>
   )
 }
 

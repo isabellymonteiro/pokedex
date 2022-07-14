@@ -1,0 +1,15 @@
+.pokemonTypeDefenses {
+  text-align: left;
+  padding-top: 40px;
+
+  &__title {
+    font-size: var(--text-base);
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    color: var(--black-1);
+    font-size: var(--text-small);
+    font-weight: 400;
+  }
+}
