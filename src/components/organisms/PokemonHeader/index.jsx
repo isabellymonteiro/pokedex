@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import IconButton from '@atoms/IconButton'
-import BackArrow from '@atoms/Icons/BackArrow'
+import Arrow from '@atoms/Icons/Arrow'
 import LikeButton from '@atoms/Icons/LikeButton'
 
 import './styles.scss'
@@ -15,7 +15,7 @@ const PokemonHeader = ({ pokemonData }) => {
   return (
     <div className='pokemonHeader'>
       <div className='pokemonHeader__tools'>
-        <IconButton Icon={BackArrow} handleOnClick={goBack} ariaLabel='Go back to pokedex' iconColor='#FFFFFF'/>
+        <IconButton Icon={Arrow} handleOnClick={goBack} ariaLabel='Go back to pokedex' iconColor='#FFFFFF'/>
         <LikeButton />
       </div>
       <div className='pokemonHeader__title'>

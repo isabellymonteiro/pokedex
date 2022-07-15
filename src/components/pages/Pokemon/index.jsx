@@ -4,6 +4,7 @@ import LoadingSpinner from '@atoms/Icons/LoadingSpinner'
 import SubpagesNav from '@organisms/SubpagesNav'
 import PokemonPageMain from '@organisms/PokemonPageMain'
 import useFetchPokemon from '@hooks/useFetchPokemon'
+import { getPokemon } from '@services/api'
 
 import './styles.scss'
 
@@ -11,7 +12,7 @@ const Pokemon = () => {
   const { pokemonName } = useParams()
   const { state } = useLocation()
 
-  const { loading, error, pokemonData } = useFetchPokemon(pokemonName, state)
+  const { loading, error, pokemonData } = useFetchPokemon(pokemonName, getPokemon, state)
 
   const subpages = [
     { subpageName: 'about', linkTo: 'about' },

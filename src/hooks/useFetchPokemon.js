@@ -1,14 +1,13 @@
 import { useState, useCallback, useEffect } from 'react'
-import { getPokemon } from '@services/api'
 
-const useFetchPokemon = (pokemonName, state) => {
+const useFetchPokemon = (pokemonParam, getFunction, state = false) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const [pokemonData, setPokemonData] = useState({})
   
-  const fetchPokemon = useCallback(async () => {
+  const fetchFunction = useCallback(async () => {
     setLoading(true)
-    const pokemon = await getPokemon(pokemonName.toLowerCase())
+    const pokemon = await getFunction(pokemonParam)
     
     if (pokemon) {
       setPokemonData(pokemon)
@@ -22,9 +21,9 @@ const useFetchPokemon = (pokemonName, state) => {
     if (state) {
       setPokemonData(state)
     } else {
-      fetchPokemon()
+      fetchFunction()
     }
-  }, [fetchPokemon])
+  }, [fetchFunction])
   
   return {
     loading,
