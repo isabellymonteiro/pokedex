@@ -2,7 +2,7 @@ import './styles.scss'
 
 const PokemonMoves = () => {
   return (
-    <h2>Pokemon Moves</h2>
+    <h2 style={{ margin-top: '20px' }}>To be implemented</h2>
   )
 }
 
