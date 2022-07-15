@@ -23,6 +23,9 @@ const PokemonAbout = () => {
     setLoading(true)
     const additionalPokemonData = await getPokemonAbout(pokemonName)
 
+
+    console.log(additionalPokemonData)
+
     if (additionalPokemonData) {
 
       const pokemonEggGroups = additionalPokemonData.egg_groups.map((eggGroup) => {
@@ -30,11 +33,17 @@ const PokemonAbout = () => {
           eggGroup.name
         )
       })
+
+
       const pokemonDescription = additionalPokemonData.flavor_text_entries[6].flavor_text
 
       const pokemonEggCycle = additionalPokemonData.hatch_counter
 
-      setPokemon({eggGroup: pokemonEggGroups, pokemonDescription: pokemonDescription, pokemonEggCycle: pokemonEggCycle})
+
+      setPokemon({eggGroup: pokemonEggGroups, 
+        pokemonDescription: pokemonDescription, 
+        pokemonEggCycle: pokemonEggCycle
+        })
     } else {
       setError(true)
     }
@@ -47,14 +56,19 @@ const PokemonAbout = () => {
   }, [fetchPokemon])
 
   return (
-    <div>
+    <div className='pokemonAboutSection'>
         {error && <ErrorMessage />}
         {loading && <LoadingSpinner />}
-        {!loading && Object.keys(pokemon).length > 0 &&
+        {!loading && state && Object.keys(pokemon).length > 0 &&
         <>
-          <span>
-            {pokemon.eggGroup}
+          <p className='pokemonAboutSection_description'>
+            {pokemon.pokemonDescription}           
+          </p>
+          <span className='pokemonAboutSection_size'>
+            Height {state.height} cm
+            Weight {state.weight} kg
           </span>
+    
         </>
       }
     </div>
