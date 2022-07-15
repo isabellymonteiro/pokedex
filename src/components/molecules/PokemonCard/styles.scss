@@ -69,7 +69,10 @@
   &--dragon {
     background: #771de5;
   }
-  // acrescentar outros types de pokemon 
+
+  &--rock {
+    background: #B8A038;
+  } 
 
   &__link {
     display: flex;
