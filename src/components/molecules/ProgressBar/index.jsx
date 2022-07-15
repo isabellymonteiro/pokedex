@@ -2,10 +2,10 @@ import './styles.scss'
 
 const ProgressBar = ({ status }) => {
 
-  const statusColor = status > 50 ? 'var(--green)' : 'var(--red)'
+  const statusColor = status >= 100 ? 'var(--green)' : 'var(--red)'
 
   const statusStyle = {
-    width: status + '%',
+    width: (status / 255 * 100) + '%',
     backgroundColor: statusColor
   }
   
