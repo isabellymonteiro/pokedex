@@ -1,0 +1,26 @@
+.pokemonPageMain {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    align-self: center;
+    width: 100%;
+    max-width: 230px;
+    padding-top: 20px;
+    z-index: 1;
+    margin-bottom: -40px;
+  }
+}
+
+@media (hover: hover) {
+  .pokemonPageMain {
+
+    &__image {
+      transition: .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

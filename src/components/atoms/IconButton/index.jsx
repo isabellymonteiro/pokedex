@@ -1,9 +1,9 @@
 import './styles.scss'
 
-const IconButton = ({ Icon, handleOnClick, ariaLabel }) => {
+const IconButton = ({ Icon, handleOnClick, ariaLabel, iconColor = false }) => {
   return (
     <button className='iconButton' onClick={handleOnClick} aria-label={ariaLabel}>
-      <Icon/>
+      <Icon color={iconColor} />
     </button>
   )
 }
