@@ -1,7 +1,83 @@
-.pokemonAboutSection_description {
-    font-size: 14px;
-}
+.pokemonAboutSection{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 
-.pokemonAboutSection_size {
+    &_description {
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: left;
+        line-height: 24px;
+        
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &__size {
+    display: flex;
+    flex-direction: column;  
+    text-align: left;  
+
+
+    &Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-items: left;
+    box-shadow: 0px 8px 23px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 100%;
+    margin-top: 30px;
     font-size: 14px;
+    }
+    
+    
+
+    &Name {
+        color: var(--black-2);
+        padding-bottom: 8px;
+    }
+    }
+
+
+    &__breeding {
+        display: grid;
+        gap: 24px;
+        margin-top: 30px;
+        text-align: left;
+        width: 100%;
+
+        &Title {
+            font-size: 16px;
+        }
+
+        &Items {
+            display: grid;
+            gap: 18px;
+            font-size: 14px;
+        }
+
+        &Item {
+            display: flex;
+        }
+
+        &Name {
+            display: inline-block;
+            color: var(--black-1);
+            min-width: 120px;
+        }
+
+        &Value {
+            display: flex;
+            text-transform: capitalize;
+
+            &--1{
+                margin-right: 15px;
+            }
+        }
+        
+    }
 }

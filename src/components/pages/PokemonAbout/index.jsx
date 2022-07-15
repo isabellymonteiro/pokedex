@@ -64,11 +64,53 @@ const PokemonAbout = () => {
           <p className='pokemonAboutSection_description'>
             {pokemon.pokemonDescription}           
           </p>
-          <span className='pokemonAboutSection_size'>
-            Height {state.height} cm
-            Weight {state.weight} kg
-          </span>
-    
+
+          <div className='pokemonAboutSection__sizeContainer'>
+            <div className='pokemonAboutSection__size'>
+              <span className='pokemonAboutSection__sizeName'>
+                Height 
+              </span>
+              <span className='pokemonAboutSection__sizeNumber'>
+                {(state.height / 10).toString().padEnd(4, "0")} cm
+              </span>
+            </div>
+
+            <div className='pokemonAboutSection__size'>
+              <span className='pokemonAboutSection__sizeName'>
+                Weight 
+              </span>
+              <span className='pokemonAboutSection__sizeNumber'>
+                {state.weight / 10} kg
+              </span>
+            </div>
+          </div>
+
+          <div className='pokemonAboutSection__breeding'>
+            <h2 className='pokemonAboutSection__breedingTitle'>
+              Breeding
+            </h2>
+            <div className='pokemonAboutSection__breedingItems'>
+              <div className='pokemonAboutSection__breedingItem'>
+                <span className='pokemonAboutSection__breedingName'>
+                Egg Groups
+                </span>   
+                <span className='pokemonAboutSection__breedingValue'>
+                <span className='pokemonAboutSection__breedingValue--1'>{pokemon.eggGroup[0]}</span> 
+                {pokemon.eggGroup[1] && <span className='pokemonAboutSection__breedingValue--2'>{pokemon.eggGroup[1]}</span>}
+                </span>   
+              </div>
+              <div className='pokemonAboutSection__breedingItem'>
+                <span className='pokemonAboutSection__breedingName'>
+                Egg Cycle
+                </span>   
+                <span className='pokemonAboutSection__breedingValue'>
+                {pokemon.pokemonEggCycle}
+                </span>   
+              </div>
+
+            </div>
+          </div>
+          
         </>
       }
     </div>
