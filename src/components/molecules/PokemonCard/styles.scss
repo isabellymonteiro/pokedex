@@ -150,3 +150,13 @@
     max-width: 70px;
   }
 }
+
+@media (hover: hover) {
+  .pokemonCard {
+    transition: .2s;
+    
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}

@@ -89,3 +89,23 @@
     }
 }
 
+@media (min-width: 800px) {
+    .mainCard {
+        max-width: 240px;
+
+        &__title {
+            padding-left: 40px;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .mainCard {
+        transition: .2s;
+        
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+}
+

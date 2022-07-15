@@ -72,6 +72,7 @@
   
   &__mainContent {
     width: 90%;
+    max-width: 840px;
   }
   &__subpages{
     width: 100%;
@@ -83,6 +84,7 @@
     &Content {
       width: 90%;
       margin: 0 auto;
+      max-width: 840px;
     }
   }
 }
