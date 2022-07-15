@@ -1,5 +1,5 @@
 import pokemonIds from '@staticData/pokemonIds.json'
-import Arrow from '@atoms/icons/Arrow'
+import Arrow from '@atoms/Icons/Arrow'
 
 import './styles.scss'
 
