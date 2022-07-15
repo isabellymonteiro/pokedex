@@ -23,12 +23,20 @@ const PokemonEvolutionChain = ({ data }) => {
     return (
       <li className='pokemonEvolutionChain__itemContainer' key={initialPokemon + firstWavePokemon}>
         <div className='pokemonEvolutionChain__item'>
-          <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[initialPokemon]}.png`}></img>
+          <img
+            className='pokemonEvolutionChain__image'
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[initialPokemon]}.png`}
+            alt={`${initialPokemon}`}
+          ></img>
           <span className='pokemonEvolutionChain__name'>{initialPokemon}</span>
         </div> 
         <Arrow color='#DADADA' invert />
         <div className='pokemonEvolutionChain__item'>
-          <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[firstWavePokemon]}.png`}></img>
+          <img 
+            className='pokemonEvolutionChain__image' 
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[firstWavePokemon]}.png`}
+            alt={`${firstWavePokemon}`}
+          ></img>
           <span className='pokemonEvolutionChain__name'>{firstWavePokemon}</span>
         </div>
       </li>
@@ -41,12 +49,20 @@ const PokemonEvolutionChain = ({ data }) => {
         return (
           <li className='pokemonEvolutionChain__itemContainer' key={firstWavePokemon + secondWavePokemon}>
             <div className='pokemonEvolutionChain__item'>
-              <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[firstWavePokemon]}.png`}></img>
+              <img 
+                className='pokemonEvolutionChain__image'
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[firstWavePokemon]}.png`}
+                alt={`${firstWavePokemon}`}
+              ></img>
               <span className='pokemonEvolutionChain__name'>{firstWavePokemon}</span>
             </div> 
             <Arrow color='#DADADA' invert />
             <div className='pokemonEvolutionChain__item'>
-              <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[secondWavePokemon]}.png`}></img>
+              <img
+                className='pokemonEvolutionChain__image'
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[secondWavePokemon]}.png`}
+                alt={`${secondWavePokemon}`}
+              ></img>
             <span className='pokemonEvolutionChain__name'>{secondWavePokemon}</span>
           </div>
         </li>
@@ -61,12 +77,20 @@ const PokemonEvolutionChain = ({ data }) => {
         return (
           <li  className='pokemonEvolutionChain__itemContainer' key={secondWavePokemon + thirdWavePokemon}>
             <div className='pokemonEvolutionChain__item'>
-              <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[secondWavePokemon]}.png`}></img>
+              <img
+                className='pokemonEvolutionChain__image'
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[secondWavePokemon]}.png`}
+                alt={`${secondWavePokemon}`}
+              ></img>
               <span className='pokemonEvolutionChain__name'>{secondWavePokemon}</span>
             </div> 
             <Arrow color='#DADADA' invert />
             <div className='pokemonEvolutionChain__item'>
-              <img className='pokemonEvolutionChain__image' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[thirdWavePokemon]}.png`}></img>
+              <img
+                className='pokemonEvolutionChain__image'
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIds[thirdWavePokemon]}.png`}
+                alt={`${thirdWavePokemon}`}
+              ></img>
             <span className='pokemonEvolutionChain__name'>{thirdWavePokemon}</span>
           </div>
           </li>
