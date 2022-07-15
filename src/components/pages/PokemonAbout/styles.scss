@@ -5,10 +5,11 @@
 
     &_description {
         text-transform: lowercase;
-        font-size: 14px;
+        font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
         text-align: left;
         line-height: 24px;
         font-weight: 400;
+
         &::first-letter {
             text-transform: capitalize;
         }
@@ -31,7 +32,7 @@
     padding: 16px 20px;
     width: 100%;
     margin-top: 30px;
-    font-size: 14px;
+    font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
     }
     
     
@@ -51,13 +52,13 @@
         width: 100%;
 
         &Title {
-            font-size: 16px;
+            font-size: clamp(var(--text-base), 2.8vw, var(--text-xlarge));
         }
 
         &Items {
             display: grid;
             gap: 18px;
-            font-size: 14px;
+            font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
         }
 
         &Item {
