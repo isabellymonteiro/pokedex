@@ -3,13 +3,13 @@
   padding-top: 40px;
 
   &__title {
-    font-size: var(--text-base);
+    font-size: clamp(var(--text-base), 2.8vw, var(--text-xlarge));
     margin-bottom: 15px;
   }
 
   &__subtitle {
     color: var(--black-1);
-    font-size: var(--text-small);
+    font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
     font-weight: 400;
   }
 }

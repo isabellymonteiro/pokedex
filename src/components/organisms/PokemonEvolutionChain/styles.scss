@@ -1,7 +1,7 @@
 .pokemonEvolutionChain {
 
   &__title {
-    font-size: var(--text-base);
+    font-size: clamp(var(--text-base), 2.8vw, var(--text-xlarge));
     text-align: left;
     padding: 30px 0 10px 0;
   }
@@ -28,7 +28,7 @@
   }
 
   &__name {
-    font-size: var(--text-small);
+    font-size: clamp(var(--text-small), 2vw, var(--text-base));
     text-transform: capitalize;
   }
 }

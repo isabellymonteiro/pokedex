@@ -1,5 +1,5 @@
 .pageTitle {
-    font-size: var(--text-6xlarge);
+    font-size: clamp(var(--text-6xlarge), 3.4vw, var(--text-9xlarge));
     font-weight: 800;
     line-height: 42px;
     text-align: left;

@@ -6,7 +6,7 @@
   padding: 14px 0;
 
   &__item {
-    font-size: var(--text-small);
+    font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
     text-transform: capitalize;
   }
 

@@ -6,7 +6,7 @@
   &__item {
     display: flex;
     align-items: center;
-    font-size: var(--text-small);
+    font-size: clamp(var(--text-small), 2.4vw, var(--text-large));
   
     &Name {
       color: var(--black-1);
@@ -19,6 +19,24 @@
       text-align: right;
       padding-right: 15px;
       min-width: 44px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .pokemonStats {
+    gap: 16px;
+  
+    &__item {
+    
+      &Name {
+        min-width: 90px;
+      }
+  
+      &BaseStat {
+        padding-right: 30px;
+        min-width: 60px;
+      }
     }
   }
 }
