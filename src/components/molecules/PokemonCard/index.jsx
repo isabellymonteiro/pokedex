@@ -7,7 +7,7 @@ const PokemonCard = ({ pokemonData }, ref) => {
     return (
       <li ref={ref} className={`pokemonCard pokemonCard--${pokemonData.types[0].type.name}`}>
         <Link
-          to={pokemonData.name}
+          to={`${pokemonData.name}/about`}
           state={pokemonData} 
           className='pokemonCard__link'>
           <div className='pokemonCard__column pokemonCard__column--1'>
