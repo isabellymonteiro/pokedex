@@ -1,10 +1,10 @@
-# Pokedex
+# Pokedex 
 
 Check out Generation 1 pokemons.
 
 ## Check out
 
-Deployed in Vercel: [Pokedex App](https://pokedex-murex-alpha.vercel.app/)
+Deployed on Vercel: [Pokedex App](https://pokedex-murex-alpha.vercel.app/)
 
 ## Try it yourself
 
